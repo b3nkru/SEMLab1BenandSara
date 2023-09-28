@@ -8,6 +8,7 @@ package geoshapes;
  *
  * @author benkruseski
  */
-public class shapes {
-    
+public abstract class shapes {
+    public abstract double getArea();
+    public abstract double getPerimeter();
 }
