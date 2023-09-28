@@ -8,6 +8,31 @@ package geoshapes;
  *
  * @author benkruseski
  */
-public class RectangularPrism {
+public class RectangularPrism extends Rectangle {
+    private double height;
+
+    public RectangularPrism(double height, double length, double width) {
+        super(length, width);
+        this.height = height;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
     
+    public double getVolume() {
+        return Math.round(super.getArea() * height);
+    }
+    
+    public double getLateralArea() {
+        return Math.round(super.getPerimeter() * height);
+    }
+    
+    public double getSurfaceArea() {
+        return Math.round(super.getPerimeter() * height) + (2 * super.getArea());
+    }
 }
