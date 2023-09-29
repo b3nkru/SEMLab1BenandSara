@@ -9,5 +9,25 @@ package geoshapes;
  * @author benkruseski
  */
 public class Sphere {
+    private double radius;
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public Sphere(double radius) {
+        this.radius = radius;
+    }
     
+    public double getSurfaceArea() {
+        return 4 * Math.PI * radius * radius;
+    }
+    
+    public double getVolume() {
+        return (4/3) * Math.PI * radius * radius * radius; 
+    }
 }
